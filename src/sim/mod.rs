@@ -35,7 +35,7 @@ impl Sim {
         if !self.imem_req.put(self.state.pc) {
             assert!(false, "imem_req port blocked!");
         }
-        self.state.pc += 4 // FIXME: 32-bit hardcoded
+        self.state.pc += 4; // FIXME: 32-bit hardcoded
     }
 
     fn decode(&mut self) {
